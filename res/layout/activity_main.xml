@@ -13,4 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ImageCache"/>
+    <Button android:id="@+id/jsonRequestBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JsonRequest"/>
 </LinearLayout>

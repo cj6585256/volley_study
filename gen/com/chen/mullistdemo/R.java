@@ -1396,7 +1396,7 @@ containing a value of this type.
         public static final int image_9=0x7f020015;
     }
     public static final class id {
-        public static final int action_settings=0x7f04003f;
+        public static final int action_settings=0x7f040042;
         public static final int afterDescendants=0x7f040028;
         public static final int all=0x7f040026;
         public static final int always=0x7f04000e;
@@ -1406,10 +1406,11 @@ containing a value of this type.
         public static final int auto=0x7f04000b;
         public static final int beforeDescendants=0x7f040027;
         public static final int blocksDescendants=0x7f040029;
-        public static final int card_list=0x7f040036;
+        public static final int card_list=0x7f040039;
         public static final int center=0x7f04001f;
         public static final int defaultPosition=0x7f040011;
         public static final int disabled=0x7f04002a;
+        public static final int dispText=0x7f040033;
         public static final int firstStrong=0x7f04001a;
         public static final int gone=0x7f040003;
         public static final int gravity=0x7f04001c;
@@ -1417,17 +1418,18 @@ containing a value of this type.
         public static final int high=0x7f04000d;
         public static final int horizontal=0x7f040005;
         public static final int ifContentScrolls=0x7f04000f;
-        public static final int imageCacheBtn=0x7f040032;
-        public static final int imageRequestBtn=0x7f040031;
+        public static final int imageCacheBtn=0x7f040035;
+        public static final int imageRequestBtn=0x7f040034;
         public static final int inherit=0x7f040018;
         public static final int insideInset=0x7f040008;
         public static final int insideOverlay=0x7f040007;
         public static final int invisible=0x7f040002;
-        public static final int itemImage=0x7f040034;
-        public static final int itemText=0x7f040035;
+        public static final int itemImage=0x7f040037;
+        public static final int itemText=0x7f040038;
+        public static final int jsonRequestBtn=0x7f040036;
         public static final int left=0x7f040012;
         public static final int list=0x7f040030;
-        public static final int listView=0x7f040033;
+        public static final int listView=0x7f040031;
         public static final int locale=0x7f040019;
         public static final int low=0x7f04000c;
         public static final int ltr=0x7f040016;
@@ -1439,22 +1441,23 @@ containing a value of this type.
         public static final int normal=0x7f04002b;
         public static final int outsideInset=0x7f04000a;
         public static final int outsideOverlay=0x7f040009;
-        public static final int ptr_id_header=0x7f040039;
-        public static final int ptr_id_image=0x7f04003a;
-        public static final int ptr_id_last_updated=0x7f04003e;
-        public static final int ptr_id_spinner=0x7f04003b;
-        public static final int ptr_id_text=0x7f04003d;
-        public static final int ptr_id_textwrapper=0x7f04003c;
+        public static final int ptr_id_header=0x7f04003c;
+        public static final int ptr_id_image=0x7f04003d;
+        public static final int ptr_id_last_updated=0x7f040041;
+        public static final int ptr_id_spinner=0x7f04003e;
+        public static final int ptr_id_text=0x7f040040;
+        public static final int ptr_id_textwrapper=0x7f04003f;
+        public static final int requestBtn=0x7f040032;
         public static final int right=0x7f040013;
         public static final int rtl=0x7f040017;
         public static final int scrapped_view=0x7f040000;
         public static final int scrolling=0x7f040025;
         public static final int singleChoice=0x7f04002d;
         public static final int software=0x7f040014;
-        public static final int text=0x7f040038;
+        public static final int text=0x7f04003b;
         public static final int textEnd=0x7f04001e;
         public static final int textStart=0x7f04001d;
-        public static final int thumbnail=0x7f040037;
+        public static final int thumbnail=0x7f04003a;
         public static final int vertical=0x7f040006;
         public static final int viewEnd=0x7f040021;
         public static final int viewStart=0x7f040020;
@@ -1464,12 +1467,13 @@ containing a value of this type.
     public static final class layout {
         public static final int act_pull_to_refresh_sample=0x7f030000;
         public static final int act_sample=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_network=0x7f030003;
-        public static final int item=0x7f030004;
-        public static final int item_sample=0x7f030005;
-        public static final int network_item=0x7f030006;
-        public static final int ptr_header=0x7f030007;
+        public static final int activity_imageloader=0x7f030002;
+        public static final int activity_json_request=0x7f030003;
+        public static final int activity_main=0x7f030004;
+        public static final int item=0x7f030005;
+        public static final int item_sample=0x7f030006;
+        public static final int network_item=0x7f030007;
+        public static final int ptr_header=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f080000;

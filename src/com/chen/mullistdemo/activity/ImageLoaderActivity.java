@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.view.Menu;
 
 import com.chen.mullistdemo.R;
-import com.chen.mullistdemo.adapter.ImageRequestAdapter;
+import com.chen.mullistdemo.adapter.ImageLoaderAdapter;
 import com.chen.mullistdemo.bean.UrlBean;
 import com.huewu.pla.lib.MultiColumnListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView.OnScrollListener;
 
-public class ImageRequestActivity extends Activity implements OnScrollListener{
+public class ImageLoaderActivity extends Activity implements OnScrollListener{
 	private MultiColumnListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class ImageRequestActivity extends Activity implements OnScrollListener{
         int width = getWindowManager().getDefaultDisplay().getWidth();
         int itemWidth = (width - 20)/3; //随便写了个20 限定大小，不限定也可以
         listView = (MultiColumnListView) findViewById(R.id.listView);
-        listView.setAdapter(new ImageRequestAdapter(this,UrlBean.urls,itemWidth));
+        listView.setAdapter(new ImageLoaderAdapter(this,UrlBean.urls));
         listView.setOnScrollListener(this);
     }
 

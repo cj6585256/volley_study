@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name="com.chen.mullistdemo.Application"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -23,8 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.chen.mullistdemo.activity.NetworkActivity"/>
+        <activity android:name="com.chen.mullistdemo.activity.ImageLoaderActivity"/>
         <activity android:name="com.chen.mullistdemo.activity.ImageRequestActivity"/>
+        <activity android:name="com.chen.mullistdemo.activity.JsonRequstAcitivity"/>
     </application>
 
 </manifest>

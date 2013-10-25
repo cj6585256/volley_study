@@ -16,6 +16,7 @@ public class MainActivity extends Activity implements OnClickListener{
         setContentView(R.layout.activity_main);
         findViewById(R.id.imageCacheBtn).setOnClickListener(this);
         findViewById(R.id.imageRequestBtn).setOnClickListener(this);
+        findViewById(R.id.jsonRequestBtn).setOnClickListener(this);
     }
 
 
@@ -32,10 +33,13 @@ public class MainActivity extends Activity implements OnClickListener{
 		Intent intent = null;
 		switch (v.getId()) {
 		case R.id.imageCacheBtn:
-			intent = new Intent(this,NetworkActivity.class);
+			intent = new Intent(this,ImageLoaderActivity.class);
 			break;
 		case R.id.imageRequestBtn:
 			intent = new Intent(this,ImageRequestActivity.class);
+			break;
+		case R.id.jsonRequestBtn:
+			intent = new Intent(this,JsonRequstAcitivity.class);
 			break;
 		default:
 			break;
