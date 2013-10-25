@@ -1418,21 +1418,20 @@ containing a value of this type.
         public static final int high=0x7f04000d;
         public static final int horizontal=0x7f040005;
         public static final int ifContentScrolls=0x7f04000f;
-        public static final int imageCacheBtn=0x7f040035;
-        public static final int imageRequestBtn=0x7f040034;
         public static final int inherit=0x7f040018;
         public static final int insideInset=0x7f040008;
         public static final int insideOverlay=0x7f040007;
         public static final int invisible=0x7f040002;
         public static final int itemImage=0x7f040037;
         public static final int itemText=0x7f040038;
-        public static final int jsonRequestBtn=0x7f040036;
         public static final int left=0x7f040012;
         public static final int list=0x7f040030;
         public static final int listView=0x7f040031;
         public static final int locale=0x7f040019;
         public static final int low=0x7f04000c;
         public static final int ltr=0x7f040016;
+        public static final int mainList=0x7f040034;
+        public static final int mianContainer=0x7f040036;
         public static final int multipleChoice=0x7f04002e;
         public static final int multipleChoiceModal=0x7f04002f;
         public static final int never=0x7f040010;
@@ -1451,6 +1450,7 @@ containing a value of this type.
         public static final int right=0x7f040013;
         public static final int rtl=0x7f040017;
         public static final int scrapped_view=0x7f040000;
+        public static final int scrollView=0x7f040035;
         public static final int scrolling=0x7f040025;
         public static final int singleChoice=0x7f04002d;
         public static final int software=0x7f040014;
@@ -1470,10 +1470,12 @@ containing a value of this type.
         public static final int activity_imageloader=0x7f030002;
         public static final int activity_json_request=0x7f030003;
         public static final int activity_main=0x7f030004;
-        public static final int item=0x7f030005;
-        public static final int item_sample=0x7f030006;
-        public static final int network_item=0x7f030007;
-        public static final int ptr_header=0x7f030008;
+        public static final int activity_network_imageview=0x7f030005;
+        public static final int activity_waterfall=0x7f030006;
+        public static final int imageloader_item=0x7f030007;
+        public static final int item_sample=0x7f030008;
+        public static final int network_imageview_item=0x7f030009;
+        public static final int ptr_header=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;

@@ -7,10 +7,15 @@ import android.view.Menu;
 import com.chen.mullistdemo.R;
 import com.chen.mullistdemo.adapter.ImageRequestAdapter;
 import com.chen.mullistdemo.bean.UrlBean;
+import com.chen.mullistdemo.tool.VolleyTool;
 import com.huewu.pla.lib.MultiColumnListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView.OnScrollListener;
-
+/**
+ * ImageRequest方式
+ * @author chen
+ *
+ */
 public class ImageRequestActivity extends Activity implements OnScrollListener{
 	private MultiColumnListView listView;
     @Override
@@ -23,7 +28,7 @@ public class ImageRequestActivity extends Activity implements OnScrollListener{
         listView.setAdapter(new ImageRequestAdapter(this,UrlBean.urls,itemWidth));
         listView.setOnScrollListener(this);
     }
-
+    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -44,6 +49,13 @@ public class ImageRequestActivity extends Activity implements OnScrollListener{
 	public void onScroll(PLA_AbsListView view, int firstVisibleItem,
 			int visibleItemCount, int totalItemCount) {
 		
+	}
+
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		VolleyTool.getInstance(this).getmRequestQueue().cancelAll(ImageRequestActivity.class.getSimpleName());
 	}
     
 }

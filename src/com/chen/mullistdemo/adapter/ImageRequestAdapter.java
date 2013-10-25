@@ -14,6 +14,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response.Listener;
 import com.android.volley.toolbox.ImageRequest;
 import com.chen.mullistdemo.R;
+import com.chen.mullistdemo.activity.ImageRequestActivity;
 import com.chen.mullistdemo.tool.VolleyTool;
 
 public class ImageRequestAdapter extends BaseAdapter { //implements Listener<Bitmap>,ErrorListener{
@@ -43,7 +44,9 @@ public class ImageRequestAdapter extends BaseAdapter { //implements Listener<Bit
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		convertView = LayoutInflater.from(context).inflate(R.layout.item,null);
+		if(convertView == null) {
+			convertView = LayoutInflater.from(context).inflate(R.layout.imageloader_item,null);
+		}
 		final ImageView itemImage = (ImageView) convertView.findViewById(R.id.itemImage);
 		TextView itemText = (TextView) convertView.findViewById(R.id.itemText);
 		String url = getItem(position);
@@ -56,6 +59,7 @@ public class ImageRequestAdapter extends BaseAdapter { //implements Listener<Bit
 						itemImage.setImageBitmap(response);
 					}
 				}, itemWidth, 0, Config.RGB_565, null));
+		request.setTag(ImageRequestActivity.class.getSimpleName());
 		request.setShouldCache(true);
 		//默认缓存位置data/data/包名/cache/volley,默认大小5MB
 		//修改缓存默认存储位置和存储区大小帖子上面有介绍

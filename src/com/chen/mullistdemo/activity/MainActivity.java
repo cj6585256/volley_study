@@ -1,22 +1,31 @@
 package com.chen.mullistdemo.activity;
 
+import java.util.List;
+
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 
+import com.chen.mullistdemo.Application;
 import com.chen.mullistdemo.R;
+import com.chen.mullistdemo.adapter.MainAdapter;
+import com.chen.mullistdemo.bean.ListItemBean;
 
-public class MainActivity extends Activity implements OnClickListener{
+public class MainActivity extends Activity implements OnItemClickListener{
+	private ListView mainList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.imageCacheBtn).setOnClickListener(this);
-        findViewById(R.id.imageRequestBtn).setOnClickListener(this);
-        findViewById(R.id.jsonRequestBtn).setOnClickListener(this);
+        mainList = (ListView) findViewById(R.id.mainList);
+        Application app = (Application) getApplication();
+        List<ListItemBean> items = app.getItems();
+        mainList.setAdapter(new MainAdapter(this,items));
+        mainList.setOnItemClickListener(this);
     }
 
 
@@ -29,21 +38,12 @@ public class MainActivity extends Activity implements OnClickListener{
 
 
 	@Override
-	public void onClick(View v) {
-		Intent intent = null;
-		switch (v.getId()) {
-		case R.id.imageCacheBtn:
-			intent = new Intent(this,ImageLoaderActivity.class);
-			break;
-		case R.id.imageRequestBtn:
-			intent = new Intent(this,ImageRequestActivity.class);
-			break;
-		case R.id.jsonRequestBtn:
-			intent = new Intent(this,JsonRequstAcitivity.class);
-			break;
-		default:
-			break;
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+		ListItemBean item = (ListItemBean) parent.getItemAtPosition(position);
+		if(null != item.getIntent()) {
+			startActivity(item.getIntent());
 		}
-		startActivity(intent);
 	}
+
 }

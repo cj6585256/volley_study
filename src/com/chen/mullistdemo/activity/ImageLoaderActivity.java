@@ -11,14 +11,21 @@ import com.huewu.pla.lib.MultiColumnListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView.OnScrollListener;
 
+/**
+ * 使用的开源的瀑布流 
+ * 地址：https://github.com/youxiachai/pinterest-like-adapter-view
+ * 有下拉刷新的功能的话 可以使用MultiColumnPullToRefreshListView
+ * @author chen
+ *
+ */
 public class ImageLoaderActivity extends Activity implements OnScrollListener{
 	private MultiColumnListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imageloader);
-        int width = getWindowManager().getDefaultDisplay().getWidth();
-        int itemWidth = (width - 20)/3; //随便写了个20 限定大小，不限定也可以
+//        int width = getWindowManager().getDefaultDisplay().getWidth();
+//        int itemWidth = (width - 20)/3; //随便写了个20 限定大小，不限定也可以
         listView = (MultiColumnListView) findViewById(R.id.listView);
         listView.setAdapter(new ImageLoaderAdapter(this,UrlBean.urls));
         listView.setOnScrollListener(this);

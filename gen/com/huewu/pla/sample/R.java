@@ -195,8 +195,8 @@ public final class R {
 	public static final class layout {
 		public static final int act_pull_to_refresh_sample = 0x7f030000;
 		public static final int act_sample = 0x7f030001;
-		public static final int item_sample = 0x7f030006;
-		public static final int ptr_header = 0x7f030008;
+		public static final int item_sample = 0x7f030008;
+		public static final int ptr_header = 0x7f03000a;
 	}
 	public static final class string {
 		public static final int app_name = 0x7f060000;

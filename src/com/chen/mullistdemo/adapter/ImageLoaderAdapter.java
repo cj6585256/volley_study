@@ -42,7 +42,7 @@ public class ImageLoaderAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		NetWorkAdapterHolder holder;
 		if(convertView == null) {
-			convertView = LayoutInflater.from(context).inflate(R.layout.item,null);
+			convertView = LayoutInflater.from(context).inflate(R.layout.imageloader_item,null);
 			holder = new NetWorkAdapterHolder();
 			holder.itemImage = (ImageView) convertView.findViewById(R.id.itemImage);
 			holder.itemText = (TextView) convertView.findViewById(R.id.itemText);
@@ -56,6 +56,7 @@ public class ImageLoaderAdapter extends BaseAdapter {
 		ImageListener listener = ImageLoader.getImageListener(holder.itemImage, 
 				android.R.drawable.ic_menu_rotate, android.R.drawable.ic_delete);
 		VolleyTool.getInstance(context).getmImageLoader().get(url, listener);
+		holder.itemText.setText(url.substring(url.length() - 8));
 		return convertView;
 	}
 	

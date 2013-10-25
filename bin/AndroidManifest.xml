@@ -8,6 +8,8 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
         android:name="com.chen.mullistdemo.Application"
@@ -26,7 +28,9 @@
         </activity>
         <activity android:name="com.chen.mullistdemo.activity.ImageLoaderActivity"/>
         <activity android:name="com.chen.mullistdemo.activity.ImageRequestActivity"/>
-        <activity android:name="com.chen.mullistdemo.activity.JsonRequstAcitivity"/>
+        <activity android:name="com.chen.mullistdemo.activity.JsonRequestAcitivity"/>
+        <activity android:name="com.chen.mullistdemo.activity.NetWorkIVActivity"/>
+        <activity android:name="com.chen.mullistdemo.activity.WaterfallActivity"/>
     </application>
 
 </manifest>

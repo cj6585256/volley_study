@@ -23,12 +23,18 @@ public class VolleyTool {
         }
         return mInstance;
     }
-
+    
 	public RequestQueue getmRequestQueue() {
 		return mRequestQueue;
 	}
 
 	public ImageLoader getmImageLoader() {
 		return mImageLoader;
+	}
+
+	public void release() {
+		this.mImageLoader = null;
+		this.mRequestQueue = null;
+		mInstance = null;
 	}
 }

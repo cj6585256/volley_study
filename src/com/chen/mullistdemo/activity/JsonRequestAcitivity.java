@@ -22,7 +22,7 @@ import com.chen.mullistdemo.tool.VolleyTool;
  * @author chen
  *
  */
-public class JsonRequstAcitivity extends Activity implements OnClickListener,Listener<JSONObject>,ErrorListener{
+public class JsonRequestAcitivity extends Activity implements OnClickListener,Listener<JSONObject>,ErrorListener{
 	private Button requestBtn;
 	private TextView dispText;
 	private static final String URL = "http://httpbin.org/get?param1=hello";
@@ -36,6 +36,7 @@ public class JsonRequstAcitivity extends Activity implements OnClickListener,Lis
 	}
 	@Override
 	public void onClick(View v) {
+		dispText.setText("请求中...");
 		doJsonRequest();
 	}
 	
@@ -43,7 +44,8 @@ public class JsonRequstAcitivity extends Activity implements OnClickListener,Lis
 		//第三个参数
 		//A JSONObject to post with the request. Null is allowed and indicates no parameters will be posted along with request.
 		JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-				Request.Method.GET,URL,null, JsonRequstAcitivity.this,JsonRequstAcitivity.this);
+				Request.Method.GET,URL,null, JsonRequestAcitivity.this,JsonRequestAcitivity.this);
+		jsonObjectRequest.setTag(JsonRequestAcitivity.class.getSimpleName());//设置tag callAll的时候使用
 		VolleyTool.getInstance(this).getmRequestQueue().add(jsonObjectRequest);
 	}
 	@Override
@@ -55,4 +57,11 @@ public class JsonRequstAcitivity extends Activity implements OnClickListener,Lis
 	public void onErrorResponse(VolleyError error) {
 		dispText.setText("Fail::"+error.toString());
 	}
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		VolleyTool.getInstance(this).getmRequestQueue().cancelAll(JsonRequestAcitivity.class.getSimpleName());
+	}
+	
+	
 }
