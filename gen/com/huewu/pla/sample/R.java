@@ -142,7 +142,7 @@ public final class R {
 		public static final int auto = 0x7f04000b;
 		public static final int beforeDescendants = 0x7f040027;
 		public static final int blocksDescendants = 0x7f040029;
-		public static final int card_list = 0x7f040034;
+		public static final int card_list = 0x7f040036;
 		public static final int center = 0x7f04001f;
 		public static final int defaultPosition = 0x7f040011;
 		public static final int disabled = 0x7f04002a;
@@ -170,22 +170,22 @@ public final class R {
 		public static final int normal = 0x7f04002b;
 		public static final int outsideInset = 0x7f04000a;
 		public static final int outsideOverlay = 0x7f040009;
-		public static final int ptr_id_header = 0x7f040037;
-		public static final int ptr_id_image = 0x7f040038;
-		public static final int ptr_id_last_updated = 0x7f04003c;
-		public static final int ptr_id_spinner = 0x7f040039;
-		public static final int ptr_id_text = 0x7f04003b;
-		public static final int ptr_id_textwrapper = 0x7f04003a;
+		public static final int ptr_id_header = 0x7f040039;
+		public static final int ptr_id_image = 0x7f04003a;
+		public static final int ptr_id_last_updated = 0x7f04003e;
+		public static final int ptr_id_spinner = 0x7f04003b;
+		public static final int ptr_id_text = 0x7f04003d;
+		public static final int ptr_id_textwrapper = 0x7f04003c;
 		public static final int right = 0x7f040013;
 		public static final int rtl = 0x7f040017;
 		public static final int scrapped_view = 0x7f040000;
 		public static final int scrolling = 0x7f040025;
 		public static final int singleChoice = 0x7f04002d;
 		public static final int software = 0x7f040014;
-		public static final int text = 0x7f040036;
+		public static final int text = 0x7f040038;
 		public static final int textEnd = 0x7f04001e;
 		public static final int textStart = 0x7f04001d;
-		public static final int thumbnail = 0x7f040035;
+		public static final int thumbnail = 0x7f040037;
 		public static final int vertical = 0x7f040006;
 		public static final int viewEnd = 0x7f040021;
 		public static final int viewStart = 0x7f040020;
@@ -195,8 +195,8 @@ public final class R {
 	public static final class layout {
 		public static final int act_pull_to_refresh_sample = 0x7f030000;
 		public static final int act_sample = 0x7f030001;
-		public static final int item_sample = 0x7f030004;
-		public static final int ptr_header = 0x7f030006;
+		public static final int item_sample = 0x7f030005;
+		public static final int ptr_header = 0x7f030007;
 	}
 	public static final class string {
 		public static final int app_name = 0x7f060000;

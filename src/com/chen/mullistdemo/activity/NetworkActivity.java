@@ -1,25 +1,25 @@
-package com.chen.mullistdemo;
+package com.chen.mullistdemo.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 
+import com.chen.mullistdemo.R;
 import com.chen.mullistdemo.adapter.NetWorkAdapter;
 import com.chen.mullistdemo.bean.UrlBean;
 import com.huewu.pla.lib.MultiColumnListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView.OnScrollListener;
 
-public class MainActivity extends Activity implements OnScrollListener{
+public class NetworkActivity extends Activity implements OnScrollListener{
 	private MultiColumnListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_network);
         int width = getWindowManager().getDefaultDisplay().getWidth();
         int itemWidth = (width - 20)/3; //随便写了个20 限定大小，不限定也可以
         listView = (MultiColumnListView) findViewById(R.id.listView);
-//      listView.setAdapter(new MyAdapter(this,UrlBean.urls,itemWidth));
         listView.setAdapter(new NetWorkAdapter(this,UrlBean.urls));
         listView.setOnScrollListener(this);
     }
